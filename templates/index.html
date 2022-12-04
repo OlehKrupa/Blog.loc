@@ -1,0 +1,124 @@
+<?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."header.php";?>
+        <div class="row">
+            <div class="col-2">
+            </div>
+
+            <div class="col-lg-4 bg-success bg-opacity-10 p-4">
+                <h3>Форма регистрации</h3>
+                <form action="register.php" method="post">
+                    <div class="col">
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="fname">Имя: </label></div>
+                            <div class="col-7"><input type="text" class="form-control" id="fname" name="fname"></div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="lname">Фамилия: </label></div>
+                            <div class="col-7"><input type="text" class="form-control" id="lname" name="lname"></div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="email">Почта: </label></div>
+                            <div class="col-7"><input type="email" class="form-control" id="email" name="email"></div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="passwd">Пароль: </label></div>
+                            <div class="col-7"><input type="password" maxlength="20" class="form-control" id="passwd"
+                              name="passwd"></div>
+                          </div>
+
+                          <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="passwd2">Повтор пароля: </label>
+                            </div>
+                            <div class="col-7 "><input type="password" maxlength="20" class="form-control" id="passwd2"
+                               name="passwd2"></div>
+                           </div>
+
+                           <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="gender">Пол: </label></div>
+                            <div class="col-7"><select name="gender" class="form-select" id="gender">
+                                <option value="other">-</option>
+                                <option value="man">Мужчина</option>
+                                <option value="woman">Женщина</option>
+                                <option value="yes">Гендерфлюидный вертосексуал</option>
+                            </select></div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="birth">Дата рождения:</label></div>
+                            <div class="col-7"><input type="date" class="form-control" id="birth" name="birth"/></div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="country">Страна: </label></div>
+                            <div class="col-7"><select name="country" class="form-select" id="country">
+                                <option value="Ukraine">Украина</option>
+                                <option value="Poland">Польша</option>
+                                <option value="Usa">США</option>
+                                <option value="Germany">Германия</option>
+                                <option value="France">Франция</option>
+                            </select></div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-5 text-start"><label class="form-label" for="country">Язык: </label></div>
+                            <div class="col-7"><select name="language" class="form-select" id="language">
+                                <?php
+                                foreach($mas as $V=>$v)
+                                    echo "<option value='$V'>$v</option>";
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-5"><input class="btn btn-primary" type="submit" name="submit"value="Зарегистрироваться"/></div>
+                        <div class="col-7"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-4 bg-primary bg-opacity-10 p-4">
+            <h3>Форма авторизации</h3>
+            <form action="login.php" method="post">
+                <div class="col">
+                    <div class="row mb-2">
+                        <div class="col-5 text-start"><label class="form-label" for="loginEmail">Почта: </label></div>
+                        <div class="col-7"><input class="form-control" type="email" id="loginEmail" name="loginEmail"/></div>
+                    </div>
+                    <div class=" row mb-2">
+                        <div class="col-5 text-start"><label class="form-label" for="loginPasswd">Пароль: </label></div>
+                        <div class="col-7"><input class="form-control" type="password" id="loginPasswd" name="loginPasswd"/></div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-5 text-start"><input class="btn btn-success" type="submit" name="submit" value="Войти"/></div>
+                        <div class="col-7"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-2 mt-2">
+            <form action="strings.php" method="get">
+               <input class="btn btn-warning bg-opacity-50" type="submit" name="strings" value="Стринги"/>
+           </form>
+       </div>
+       <div class="col-2 mt-2">
+            <form action="files.php" method="get">
+               <input class="btn btn-warning bg-opacity-50" type="submit" name="strings" value="Файлы"/>
+           </form>
+        </div>
+   <div class="col-4"></div>
+</div>
+</div>
+
+<?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
