@@ -1,4 +1,4 @@
-<footer class="text-center pt-4 my-md-5 pt-md-5 border-top">
+<footer class="text-center pt-4 my-md-5 pt-md-2 border-top">
 <div class="row">
  		<div class="col-6 col-md">
  			<h5>Footer</h5>
