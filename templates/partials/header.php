@@ -23,11 +23,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="">Додому</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Додому</a>
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="">Увійти</a>
+                                <a class="nav-link active" aria-current="page" href="login.php">Увійти</a>
                         </li>
                     </ul>
 
