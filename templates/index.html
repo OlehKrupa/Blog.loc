@@ -1,66 +1,19 @@
 <?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."header.php";?>
 <div class="row">
     <div class="col-1">
+        <?php echo("Вiтаю, ".$_SESSION['user']) ?>
     </div>
-    <div class="col-lg-4 bg-success bg-opacity-10 px-4 py-2">
-        <h3>Реєстрація</h3>
-        <form action="register.php" method="post">
-            <div class="col">
-                <div class="row mb-2">
-                    <div class="col-5 text-end"><label class="form-label" for="fname">Нікнейм: </label></div>
-                    <div class="col-7"><input type="text" class="form-control" id="fname" name="fname"></div>
-                </div>
 
-                <div class="row mb-2">
-                    <div class="col-5 text-end"><label class="form-label" for="email">Пошта: </label></div>
-                    <div class="col-7"><input type="email" class="form-control" id="email" name="email"></div>
-                </div>
+    <div class="col-7">
+        Топики
+    </div>
 
-                <div class="row mb-2">
-                    <div class="col-5 text-end"><label class="form-label" for="passwd">Пароль: </label></div>
-                    <div class="col-7"><input type="password" maxlength="20" class="form-control" id="passwd"
-                      name="passwd"></div>
-                  </div>
+    <div class="col-2">
+        <?php require_once "category.php";?>
+    </div>
 
-                  <div class="row mb-2">
-                    <div class="col-5 text-end"><label class="form-label" for="passwd2">Повтор пароля: </label>
-                    </div>
-                    <div class="col-7 "><input type="password" maxlength="20" class="form-control" id="passwd2"
-                     name="passwd2"></div>
-                 </div>
-                 <div class="row mb-2">
-                    <div class="d-grid gap-2 col-6 mx-auto my-1">
-                        <input class="btn btn-primary" type="submit" name="submit"value="Реєстрація"/></div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="col-2"> </div>
-
-        <div class="col-lg-4 bg-primary bg-opacity-10 px-4 py-2">
-            <h3>Вхід</h3>
-            <form action="login.php" method="post">
-                <div class="col">
-                    <div class="row mb-2">
-                        <div class="col-5 text-end"><label class="form-label" for="loginEmail">Нікнейм: </label></div>
-                        <div class="col-7"><input class="form-control" type="email" id="loginEmail" name="loginEmail"/></div>
-                    </div>
-                    <div class=" row mb-2">
-                        <div class="col-5 text-end"><label class="form-label" for="loginPasswd">Пароль: </label></div>
-                        <div class="col-7"><input class="form-control" type="password" id="loginPasswd" name="loginPasswd"/></div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="d-grid gap-2 col-6 mx-auto my-1">
-                            <input class="btn btn-success" type="submit" name="submit" value="Вхід"/></div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-1">
-            </div>
-        </div>
-
-        <?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
+    <div class="col-1">
+        Заглушка
+    </div>
+</div>
+<?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
