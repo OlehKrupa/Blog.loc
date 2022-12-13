@@ -29,6 +29,10 @@
                         <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="login.php">Увійти</a>
                         </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="new_topic.php">Написати</a>
+                        </li>
                     </ul>
 
                     <form class="d-flex" role="search">
