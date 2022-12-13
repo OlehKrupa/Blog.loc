@@ -11,20 +11,23 @@ if (!empty($_POST)){
 		}
 	}
 
+	$stmt = $dbConnect->prepare("SELECT `nickname`,`password_hash` FROM `user` WHERE `nickname` = :login");
+	$stmt->execute(["login"=>$_POST['login_name']]);
+	$isExistUser = $stmt->fetch(PDO::FETCH_ASSOC);
+
+	if (empty($isExistUser)){
+		$error['login_name']="User not found!";
+	}
+
+	if (!password_verify($_POST['login_password'], $isExistUser["password_hash"])){
+		$error['login_password']="Incorrect password!";
+	}
+
 	if (empty($error))
 	{
-		if ($_POST['login_name'] === USER_NAME && $_POST['login_password'] === USER_PASSWORD){
-			$_SESSION['user']=$_POST['login_name'];
-			header("location: /index.php");
-			die();
-		}
-		else{
-		//Типу якщо нічого не ввели то входимо як гість
-		//Але так не працює
-			$_SESSION['user']='guest';
-			header("location: /index.php");
-			die();
-		}
+		$_SESSION['user']=$_POST['login_name'];
+		header("location: /index.php");
+		die();
 	}
 }
 

@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-define("USER_NAME","Zhabka");
-define("USER_PASSWORD","1111");
+
 
 define("ROOT_PATH", dirname(__FILE__));
 define("TEMPLATES_PATH", dirname(__FILE__).DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR);
