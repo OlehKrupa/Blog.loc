@@ -29,9 +29,9 @@
                       <div class="invalid-feedback">
                         <?php echo $error['password'] ?? '';?>;
                     </div>
-                  </div>
+                </div>
 
-                  <div class="row mb-2">
+                <div class="row mb-2">
                     <div class="col-5 text-end"><label class="form-label" for="confirm_password">Повтор пароля: </label>
                     </div>
                     <div class="col-7 "><input type="password" maxlength="20" class="form-control <?php if(!empty($error['confirm_password'])) echo 'is-invalid' ?>" id="confirm_password"
@@ -39,9 +39,9 @@
                      <div class="invalid-feedback">
                         <?php echo $error['confirm_password'] ?? '';?>;
                     </div>
-                 </div>
+                </div>
 
-                 <div class="row mb-2">
+                <div class="row mb-2">
                     <div class="d-grid gap-2 col-6 mx-auto my-1">
                         <input class="btn btn-primary" type="submit" name="submit"value="Реєстрація"/></div>
                     </div>
@@ -59,15 +59,15 @@
                         <div class="col-5 text-end"><label class="form-label" for="login_name">Нікнейм: </label></div>
                         <div class="col-7"><input class="form-control <?php if(!empty($error['login_name'])) echo 'is-invalid' ?>" type="text" id="login_name" name="login_name"/></div>
                         <div class="invalid-feedback">
-                        <?php echo $error['login_name'] ?? '';?>;
-                    </div>
+                            <?php echo $error['login_name'] ?? '';?>;
+                        </div>
                     </div>
                     <div class=" row mb-2">
                         <div class="col-5 text-end"><label class="form-label" for="login_password">Пароль: </label></div>
                         <div class="col-7"><input class="form-control <?php if(!empty($error['login_password'])) echo 'is-invalid' ?>" type="password" id="login_password" name="login_password"/></div>
                         <div class="invalid-feedback">
-                        <?php echo $error['login_password'] ?? '';?>;
-                    </div>
+                            <?php echo $error['login_password'] ?? '';?>;
+                        </div>
                     </div>
 
                     <div class="row mb-2">
@@ -80,6 +80,8 @@
 
             <div class="col-1">
             </div>
-        </div>  
-         
-        <?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
+        </div>
+    </div>
+</div>  
+
+<?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
