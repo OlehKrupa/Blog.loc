@@ -1,24 +1,32 @@
 <?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."header.php";?>
 <div class="row">
-    <div class="col-1">
+    <div class="col-1 ">
         <?php echo("Вiтаю, ".$_SESSION['user']) ?>
     </div>
 
-    <div class="col-7">
-        Топики
-    </div>
+    <div class="col-8">
+        <div class="list-group mx-2">
+            <?php require_once "topic.php";
+                foreach ($topics as $value):?>
+                <a href="#" class="list-group-item list-group-item-action text-truncate"><?php echo $value;?></a>
+                <?php endforeach; ?>
+            </div>
+        </div>
 
-    <div class="col-2">
-        Тема топиков
-        <select name="category" class="form-select" id="category">
-        <?php require_once "category.php";
-            foreach ($categories as $key => $value):?>
-        <option value='<?php echo $key;?>'><?php echo $value;?></option>
-        <?php endforeach; ?>
-    </div>
+        <div class="col-3">
+            Тема топиков
 
-    <div class="col-1">
-        Заглушка
-    </div>
-</div>
-<?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
+            <form action="topic.php" method="post">
+                <select name="select_category" class="form-select" id="select_category">
+                    <?php require_once "category.php";
+                        foreach ($categories as $key => $value):?>
+                        <option value='<?php echo $key;?>'><?php echo $value;?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                     <input class="btn btn-primary" type="submit" name="submit" value="Обрати топік"/></div>
+
+                </form>
+            </div>
+        </div>
+        <?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
