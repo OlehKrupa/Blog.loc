@@ -6,5 +6,11 @@ if(empty($_SESSION['user'])){
 	die();
 }
 
-require_once TEMPLATES_PATH."index.html";
+if($_SESSION['user_role']==='user'){
+	require_once TEMPLATES_PATH."index.html";
+}
+
+if($_SESSION['user_role']==='admin'){
+	require_once TEMPLATES_PATH."admin.html";
+}
 ?>
