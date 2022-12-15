@@ -51,7 +51,11 @@ if (!empty($_POST)){
 				"auth_token"=> "AUTH_TOKEN_DEFAULT",
 			]
 		);
+
 		$_SESSION['user']=$_POST['name'];
+		$_SESSION['user_id']=$dbConnect->lastInsertId();
+		$_SESSION['user_role']='user';
+
 		header("location: /index.php");
 		die();
 	}
