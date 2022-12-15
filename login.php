@@ -34,6 +34,5 @@ if (!empty($_POST)){
 	}
 }
 
-
 require_once TEMPLATES_PATH."login.html";
 ?>
