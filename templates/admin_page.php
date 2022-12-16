@@ -13,7 +13,7 @@
             <select name="select_category" class="form-select" id="select_category">
                 <?php require_once "category.php";
                     foreach ($categories as $key => $value):?>
-                    <option value='<?php echo $key;?>'><?php echo $value;?></option>
+                    <option value='<?php echo $key;?>' ><?php echo $value;?></option>
                     <?php endforeach; ?>
                 </select>
 
@@ -46,17 +46,16 @@
         </div>
 
         <div class="col">
-           <form action="admin.php" method="post"> 
-            <button class="btn btn-success" type="submit" id="approve" name="approve">Одобрить</button>
-            <button class="btn btn-warning" type="button" id="next" name="next">Следующее</button>
-            <button class="btn btn-danger" type="button" id="delete" name="delete">Удалить</button>
-        </form>
+            <form action="admin.php" method="post"> 
+                <button class="btn btn-success" type="submit" id="approve" name="approve">Одобрить</button>
+                <button class="btn btn-warning" type="submit" id="next" name="next">Следующее</button>
+                <button class="btn btn-danger" type="submit" id="delete" name="delete">Удалить</button>
+            </form>
+        </div>
     </div>
 
-</div>
-
-<div class="col-2">
-
-</div>
+    <div class="col-2">
+        <?php echo("Адмін: ".$_SESSION['user']) ?>
+    </div>
 </div>
 <?php include TEMPLATES_PATH."partials".DIRECTORY_SEPARATOR."footer.php";?>
