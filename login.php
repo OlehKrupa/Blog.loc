@@ -17,9 +17,8 @@ if (!empty($_POST)){
 
 	if (empty($isExistUser)){
 		$error['login_name']="User not found!";
-	}
-
-	if (!password_verify($_POST['login_password'], $isExistUser["password_hash"])){
+		$error['login_password']="Incorrect password!";
+	} else if (!password_verify($_POST['login_password'], $isExistUser["password_hash"])){
 		$error['login_password']="Incorrect password!";
 	}
 
@@ -28,7 +27,6 @@ if (!empty($_POST)){
 		$_SESSION['user']=$_POST['login_name'];
 		$_SESSION['user_id']=$isExistUser['id'];
 		$_SESSION['user_role']=$isExistUser['role'];
-
 		header("location: /index.php");
 		die();
 	}
