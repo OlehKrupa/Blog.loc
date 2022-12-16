@@ -13,7 +13,7 @@
             <select name="select_category" class="form-select" id="select_category">
                 <?php require_once "category.php";
                     foreach ($categories as $key => $value):?>
-                    <option value='<?php echo $key;?>' ><?php echo $value;?></option>
+                    <option  value='<?php echo $key;?>' <?php if($key===$category-1) echo "selected"; ?> > <?php echo $value;?></option>
                     <?php endforeach; ?>
                 </select>
 
