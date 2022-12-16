@@ -11,6 +11,7 @@ if($_SESSION['user_role']==='user'){
 }
 
 if($_SESSION['user_role']==='admin'){
-	require_once TEMPLATES_PATH."admin.html";
+	header("location: /admin.php");
+	die();
 }
 ?>
