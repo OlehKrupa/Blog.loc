@@ -14,4 +14,5 @@ if($_SESSION['user_role']==='admin'){
 	header("location: /admin.php");
 	die();
 }
+
 ?>
