@@ -7,7 +7,7 @@ if(empty($_SESSION['user'])){
 }
 
 if($_SESSION['user_role']==='user'){
-	require_once TEMPLATES_PATH."index.html";
+	require_once TEMPLATES_PATH."index.php";
 }
 
 if($_SESSION['user_role']==='admin'){

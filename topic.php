@@ -13,5 +13,5 @@ $stmt=$dbConnect->prepare(
 $stmt->execute(["selected_category"=>$select]);
 $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-require_once TEMPLATES_PATH."index.html";
+require_once TEMPLATES_PATH."index.php";
 ?>

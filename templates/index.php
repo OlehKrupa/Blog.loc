@@ -13,6 +13,11 @@
                   <div class="card-body">
                     <p class="card-text"><?php echo $value["text"];?></p>
                 </div>
+                <div class="card-footer text-end">
+                    <button class="btn btn-success" type="button" id="b1" name="b1">Вподобайка</button>
+                    <button class="btn btn-secondary" type="button" id="b2" name="b2">Поділитися</button>
+                    <button class="btn btn-danger invisible" type="submit" id="delete" name="delete">Антибаза</button>
+                </div>
             </div>
             <?php endforeach; ?>
         </div>

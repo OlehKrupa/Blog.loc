@@ -27,7 +27,7 @@ if (!empty($_POST)){
 		$_SESSION['user']=$_POST['login_name'];
 		$_SESSION['user_id']=$isExistUser['id'];
 		$_SESSION['user_role']=$isExistUser['role'];
-		header("location: /index.php");
+		header("location: /index_route.php");
 		die();
 	}
 }
