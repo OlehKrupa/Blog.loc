@@ -50,7 +50,7 @@
             <button class="btn btn-success" type="submit" id="approve" name="approve">База</button>
             <button class="btn btn-warning" type="submit" id="next" name="next">Наступний</button>
             <button class="btn btn-warning" type="submit" id="prev" name="prev">Попередній</button>
-            <button class="btn btn-danger" type="submit" id="delete" name="delete">Антибаза</button>
+            <button class="btn btn-danger" type="submit" id="delete" name="delete">Видалити</button>
         </div>
     </form>
 </div>
