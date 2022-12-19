@@ -50,8 +50,8 @@ if (!empty($articles)){
 
 	if (isset($_POST['approve'])){
 		$approve_category= $_POST['select_category']+1;
-		$approve_title= $_POST['title'];
-		$approve_text= $_POST['text'];
+		$approve_title= htmlspecialchars ($_POST['title']);
+		$approve_text= htmlspecialchars ($_POST['text']);
 
 		$approve_id = $articles[$current_article]['id'];
 
