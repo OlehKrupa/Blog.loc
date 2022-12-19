@@ -45,9 +45,9 @@ if (!empty($_POST)){
 
 		$stmt->execute(
 			[
-				"name"=> $_POST['name'],
-				"email"=> $_POST['email'],
-				"password"=> password_hash($_POST['password'], PASSWORD_DEFAULT),
+				"name"=> htmlspecialchars ($_POST['name']),
+				"email"=> htmlspecialchars ($_POST['email']),
+				"password"=> password_hash(htmlspecialchars ($_POST['password']), PASSWORD_DEFAULT),
 				"auth_token"=> "AUTH_TOKEN_DEFAULT",
 			]
 		);
@@ -56,7 +56,7 @@ if (!empty($_POST)){
 		$_SESSION['user_id']=$dbConnect->lastInsertId();
 		$_SESSION['user_role']='user';
 
-		header("location: /index.php");
+		header("location: /index_route.php");
 		die();
 	}
 }

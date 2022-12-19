@@ -12,19 +12,19 @@ if (!empty($_POST)){
 	}
 
 	$stmt = $dbConnect->prepare("SELECT `id`,`nickname`,`password_hash`,`role` FROM `user` WHERE `nickname` = :login");
-	$stmt->execute(["login"=>$_POST['login_name']]);
+	$stmt->execute(["login"=>htmlspecialchars ($_POST['login_name'])]);
 	$isExistUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	if (empty($isExistUser)){
 		$error['login_name']="User not found!";
 		$error['login_password']="Incorrect password!";
-	} else if (!password_verify($_POST['login_password'], $isExistUser["password_hash"])){
+	} else if (!password_verify(htmlspecialchars ($_POST['login_password']), $isExistUser["password_hash"])){
 		$error['login_password']="Incorrect password!";
 	}
 
 	if (empty($error))
 	{
-		$_SESSION['user']=$_POST['login_name'];
+		$_SESSION['user']=htmlspecialchars ($_POST['login_name']);
 		$_SESSION['user_id']=$isExistUser['id'];
 		$_SESSION['user_role']=$isExistUser['role'];
 		header("location: /index_route.php");
