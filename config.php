@@ -9,4 +9,10 @@ define("DB_USER","db_user");
 define("DB_USER_PASS","1111");
 
 $dbConnect = new PDO('mysql:host=localhost;dbname='.DB_NAME,DB_USER,DB_USER_PASS);
+
+if(empty($_SESSION['user'])){
+	header("location: /login.php");
+	die();
+}
+
 ?>

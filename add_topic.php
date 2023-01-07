@@ -2,7 +2,7 @@
 require_once "config.php";
 
 $fields = ["title","text"];
-$selected_category = $_POST['select_category']+1;
+$selected_category = $_POST['select_category'];
 $current_user_id = $_SESSION['user_id'];
 
 if (!empty($_POST)){
@@ -46,5 +46,5 @@ if (!empty($_POST)){
 		echo "<script type='text/javascript'>alert('Ваш пост проходить модерацію');</script>";
 	}
 }
-require_once TEMPLATES_PATH."new_topic.html";
+require_once TEMPLATES_PATH."new_topic.php";
 ?>
